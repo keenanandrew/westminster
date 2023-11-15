@@ -1,0 +1,7 @@
+name: Get MPs
+on: workflow_dispatch
+
+jobs:
+  - name: Fetch MP names
+  - runs-on: ubuntu-latest
+    run: echo 'Hello, everyone!'
