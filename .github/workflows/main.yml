@@ -27,4 +27,5 @@ jobs:
           git add .
           git commit -m "csv to repo"
           git push
+        with: repo-token: ${{ secrets.GITHUB_TOKEN }}
           
