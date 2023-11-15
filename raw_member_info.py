@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+import datetime
 
 def fetch_all_details(url):
     limit = 20
@@ -31,4 +32,6 @@ members_url = 'https://members-api.parliament.uk/api/Members/Search?House=1&IsCu
 
 all_details = fetch_all_details(members_url)
 all_details['start_date'] = pd.to_datetime(all_details['start_date'])
-all_details.to_csv('all_details.csv')
+
+today = datetime.datetime.now().strftime("%Y-%m-%d")
+all_details.to_csv(f'all_details_{today}.csv')
