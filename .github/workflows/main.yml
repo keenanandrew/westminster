@@ -7,7 +7,14 @@ jobs:
     steps:
       - name: Provision
         uses: actions/checkout@v4
-      - name: First thing
-        run: echo 'Hello, everyone!'
+
+      - name: Set up Python & Pandas
+        uses: actions/setup-python@v4
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pandas
+
+
       - name: Get the MP names
         run: python3 raw_member_info.py
+
