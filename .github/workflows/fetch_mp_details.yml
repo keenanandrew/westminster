@@ -1,4 +1,4 @@
-name: Get MPs
+name: Fetch MP details
 on: workflow_dispatch
 
 jobs:
