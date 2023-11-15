@@ -19,7 +19,7 @@ jobs:
 
       - name: Create or update csv
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python raw_member_info.py
           git config user.name github-actions
@@ -27,5 +27,3 @@ jobs:
           git add .
           git commit -m "csv to repo"
           git push
-        with: repo-token: ${{ secrets.GITHUB_TOKEN }}
-          
