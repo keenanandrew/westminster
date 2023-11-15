@@ -4,6 +4,9 @@ on: workflow_dispatch
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Provision
         uses: actions/checkout@v4
