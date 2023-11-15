@@ -5,5 +5,9 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
+      - name: Provision
+        uses: actions/checkout@v4
       - name: First thing
         run: echo 'Hello, everyone!'
+      - name: Get the MP names
+        run: python3 raw_member_info.py
